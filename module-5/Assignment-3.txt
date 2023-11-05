@@ -1,0 +1,156 @@
+Building a Blog with Django
+
+Objective: To introduce students to web development with Django.
+
+Task:
+In this assignment, you will guide students in building a simple blogging platform using Django. They should set up a Django project and create a blog app, define models for blog posts and categories, implement views for listing blog posts, viewing individual posts, and adding new posts, create templates for rendering blog post pages and lists, and configure the Django admin panel for managing blog content.
+
+Instructions:
+
+Instruct the students to open their preferred text editor or integrated development environment (IDE) for Python.
+
+Ask them to create a Django project using the following command (replace "projectname" with a suitable project name):
+
+
+django-admin startproject projectname
+
+
+Inside the project directory, create a Django app named "blog" using the following command:
+
+
+python manage.py startapp blog
+
+
+Define models for the blog app by editing the "models.py" file within the "blog" app directory. Create models for blog posts and categories.
+
+Example model definitions ("models.py" within the "blog" app):
+
+
+from django.db import models
+
+class Category(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+class BlogPost(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    date_published = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
+
+
+Create database tables for the defined models by running the following commands:
+
+
+python manage.py makemigrations
+python manage.py migrate
+
+
+Implement views for the blog app by creating functions in the "views.py" file within the "blog" app directory. Define views for listing blog posts, viewing individual posts, and adding new posts.
+
+Example view functions ("views.py" within the "blog" app):
+
+
+from django.shortcuts import render, get_object_or_404
+from .models import BlogPost
+
+def post_list(request):
+    posts = BlogPost.objects.all()
+    return render(request, 'blog/post_list.html', {'posts': posts})
+
+def post_detail(request, pk):
+    post = get_object_or_404(BlogPost, pk=pk)
+    return render(request, 'blog/post_detail.html', {'post': post})
+
+def add_post(request):
+    # Implement view logic for adding new posts
+    pass
+
+
+Create templates for rendering blog post pages and lists. Create HTML templates within a "templates" directory inside the "blog" app directory. Encourage students to use template inheritance for consistency.
+
+Example template structure ("templates" directory within the "blog" app):
+
+blog/
+templates/
+blog/
+base.html (base template with common structure)
+post_list.html (template for listing blog posts)
+post_detail.html (template for viewing individual blog posts)
+add_post.html (template for adding new posts)
+Configure the Django admin panel for managing blog content. Register the models (BlogPost and Category) in the "admin.py" file within the "blog" app directory.
+
+Example admin registration ("admin.py" within the "blog" app):
+
+
+from django.contrib import admin
+from .models import BlogPost, Category
+
+admin.site.register(BlogPost)
+admin.site.register(Category)
+
+
+Define URLs for the blog app by creating a "urls.py" file within the "blog" app directory. Map URL patterns to the view functions defined earlier.
+
+Example URL mappings ("urls.py" within the "blog" app):
+
+
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.post_list, name='post_list'),
+    path('post/<int:pk>/', views.post_detail, name='post_detail'),
+    path('add_post/', views.add_post, name='add_post'),
+]
+
+
+Include the blog app's URLs in the project's "urls.py" file within the project directory.
+
+Example URL inclusion ("urls.py" within the project directory):
+
+
+from django.contrib import admin
+from django.urls import include, path
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('blog/', include('blog.urls')),
+]
+
+
+Instruct students to run the Django development server using the following command:
+
+
+python manage.py runserver
+
+
+Encourage students to open a web browser and navigate to the URL where their Django app is running (typically, it will be something like "http://localhost:8000/blog/"). They should be able to view and interact with their blog, including listing posts and viewing individual posts.
+
+Suggest that they explore further by adding functionality to add new posts and improving the templates and styling.
+
+Save the Python files with appropriate filenames, such as "models.py," "views.py," "urls.py," and "admin.py," within the "blog" app directory.
+
+Assignment Variation:
+To make the assignment more comprehensive, you can add more features to the blog platform, such as user authentication, commenting on posts, and implementing search functionality.
+
+Submission:
+
+After completing the assignment, students should create a ZIP file containing the entire Django project directory, including all code files, templates, and configurations.
+
+Instruct them to upload the ZIP file to the course's assignment submission portal.
+
+Evaluation Criteria:
+
+Proper setup of a Django project and app.
+Correct definition of models for blog posts and categories.
+Accurate implementation of views for listing, viewing, and adding posts.
+Creation of HTML templates with appropriate structure and inheritance.
+Configuration of the Django admin panel for managing blog content.
+Successful execution of the Django development server.
+Adherence to the submission instructions.

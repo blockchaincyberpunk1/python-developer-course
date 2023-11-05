@@ -1,0 +1,65 @@
+Debugging and Test Automation
+
+Objective: To explore debugging techniques and test automation.
+
+Task:
+In this assignment, students will work on a Python project with known bugs. They should identify and document the bugs in the code, use debugging tools like pdb or integrated development environment (IDE) debuggers to locate and fix issues, and develop automated tests for the project to ensure that bugs are fixed and future changes do not introduce regressions.
+
+Instructions:
+
+Instruct students to open their preferred text editor or integrated development environment (IDE) for Python.
+
+Provide students with a Python project (a script or module) that contains known bugs. Alternatively, they can choose an existing project with known issues or bugs in their own codebase.
+
+Encourage students to review the code and identify the bugs or issues they need to address. They should document each bug, describing its symptoms, expected behavior, and any error messages.
+
+Guide students to use debugging techniques to locate and fix the identified bugs. They can use one or more of the following approaches:
+
+Use Python's built-in pdb (Python Debugger) module to interactively debug the code.
+Utilize the debugging features of their chosen IDE or code editor (e.g., Visual Studio Code, PyCharm).
+Use logging to track program execution and identify issues.
+Instruct students to make the necessary code changes to fix the identified bugs. Encourage them to test the code after each bug fix to ensure correctness.
+
+Explain the importance of automated testing. Students should develop automated tests to validate that the bugs are fixed and to prevent regressions in the future. They can use Python testing frameworks like unittest or pytest.
+
+Encourage students to create test cases that cover different scenarios, including normal inputs, edge cases, and potential corner cases. These test cases should thoroughly exercise the functionality affected by the fixed bugs.
+
+Example test function using unittest:
+
+
+import unittest
+
+def add(a, b):
+    return a + b
+
+class TestMathFunctions(unittest.TestCase):
+    def test_addition(self):
+        self.assertEqual(add(2, 3), 5)
+
+if __name__ == '__main__':
+    unittest.main()
+
+
+Ask students to run their automated tests to ensure that the fixed code passes all test cases without errors.
+
+Encourage them to document the testing process, including the test cases created and any issues encountered during debugging and testing.
+
+Instruct students to submit the fixed Python project, the automated test suite, and any documentation related to debugging and testing.
+
+Assignment Variation:
+To make the assignment more advanced, students can explore more complex debugging tools and techniques, such as using third-party debugging libraries, profiling code for performance optimization, or setting up continuous integration (CI) pipelines for automated testing.
+
+Submission:
+
+After completing the assignment, students should create a ZIP file containing their fixed Python project, the automated test suite, any necessary testing framework configuration files (e.g., pytest.ini), and any additional documentation related to debugging and testing.
+
+Instruct them to upload the ZIP file to the course's assignment submission portal.
+
+Evaluation Criteria:
+
+Successful identification and documentation of bugs in the code.
+Effective use of debugging tools and techniques to locate and fix the bugs.
+Creation of thorough and relevant automated test cases.
+Successful execution of automated tests with no failures.
+Clear and well-documented debugging and testing process.
+Adherence to the submission instructions.

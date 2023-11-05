@@ -1,0 +1,134 @@
+Interactive Web Form with Flask
+
+Objective: To practice handling user input and forms with Flask.
+
+Task:
+In this assignment, you will guide students to build a Flask application that includes an interactive web form. They should create a form with input fields (e.g., text, dropdowns), implement server-side logic to process form submissions, validate and handle form data (e.g., check for empty fields, display validation errors), and render a response page with the submitted data.
+
+Instructions:
+
+Instruct the students to open their preferred text editor or integrated development environment (IDE) for Python.
+
+Ask them to create a Python program that does the following:
+
+a. Set up a Flask application by importing the Flask library and initializing an instance of the Flask class.
+
+
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+b. Create a route for the web form. The route should render an HTML template containing the form.
+
+
+@app.route("/", methods=["GET", "POST"])
+def index():
+    if request.method == "POST":
+        # Process form submission here
+        pass
+    return render_template("form.html")
+
+
+c. Create an HTML template (e.g., "form.html") that displays the form to the user. Encourage students to include various form input fields (e.g., text input, dropdowns, radio buttons) and labels. Also, include a submit button.
+
+Example form template ("templates/form.html"):
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Form</title>
+</head>
+<body>
+    <h1>Web Form</h1>
+    <form method="POST" action="/">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+
+d. Implement server-side logic to process form submissions within the route. Retrieve and validate form data, and handle any errors or validation issues.
+
+
+@app.route("/", methods=["GET", "POST"])
+def index():
+    if request.method == "POST":
+        name = request.form.get("name")
+        email = request.form.get("email")
+        gender = request.form.get("gender")
+
+        # Implement form data validation and processing here
+        if not name or not email or not gender:
+            error_message = "Please fill out all fields."
+            return render_template("form.html", error_message=error_message)
+        else:
+            # Successful form submission
+            return render_template("response.html", name=name, email=email, gender=gender)
+
+    return render_template("form.html")
+
+e. Create a response page (e.g., "response.html") that displays the submitted data to the user.
+
+Example response template ("templates/response.html"):
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Submission Successful</title>
+</head>
+<body>
+    <h1>Form Submission Successful</h1>
+    <p>Name: {{ name }}</p>
+    <p>Email: {{ email }}</p>
+    <p>Gender: {{ gender }}</p>
+    <a href="/">Back to Form</a>
+</body>
+</html>
+
+Instruct the students to run the Flask app locally by adding the following code at the end of their Python program:
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
+
+
+Ask them to open a web browser and navigate to the URL where their Flask app is running (typically, it will be something like "http://localhost:5000"). They should be able to see and use the web form.
+
+Encourage students to test their form with various inputs, including valid and invalid data, to verify that the server-side logic for data validation and submission processing works correctly.
+
+Suggest that they enhance the form by adding more input fields or improving the validation logic.
+
+Save the Python program with an appropriate filename, such as "interactive_web_form.py."
+
+Assignment Variation:
+To make the assignment more complex, you can introduce more advanced form elements (e.g., file uploads, checkboxes) and more extensive data validation.
+
+Submission:
+
+After completing the assignment, students should save their Python program file (e.g., interactive_web_form.py).
+
+They should create a ZIP file containing the Python program file, HTML template files, and any additional files or directories used.
+
+Instruct them to upload the ZIP file to the course's assignment submission portal.
+
+Evaluation Criteria:
+
+Proper setup of a Flask application.
+Correct creation of routes and HTML templates for the form and response.
+Accurate implementation of server-side logic for processing form submissions and data validation.
+Clear and informative error messages for form validation.
+Successful execution of the Flask app locally.
+Adherence to the submission instructions.

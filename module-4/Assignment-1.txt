@@ -1,0 +1,87 @@
+Class and Object Creation
+
+Objective: To practice creating classes and objects in Python.
+
+Task:
+In this assignment, you will practice creating classes and objects in Python by assigning students the task of designing a Python program that demonstrates the creation of classes and objects. They should create multiple classes with attributes and methods, instantiate objects from these classes, and interact with objects by calling methods and modifying attributes.
+
+Instructions:
+
+Instruct the students to open their preferred text editor or integrated development environment (IDE) for Python.
+
+Ask them to create a Python program that does the following:
+
+a. Define two or more classes with meaningful names. Each class should have attributes (instance variables) and methods (functions).
+
+Example class definitions:
+
+
+class Student:
+    def __init__(self, name, age, major):
+        self.name = name
+        self.age = age
+        self.major = major
+
+    def display_info(self):
+        print(f"Name: {self.name}, Age: {self.age}, Major: {self.major}")
+
+class BankAccount:
+    def __init__(self, account_number, balance):
+        self.account_number = account_number
+        self.balance = balance
+
+    def deposit(self, amount):
+        self.balance += amount
+
+    def withdraw(self, amount):
+        if amount <= self.balance:
+            self.balance -= amount
+        else:
+            print("Insufficient balance.")
+
+
+b. Instruct them to instantiate objects from the defined classes. Encourage them to create multiple objects of each class with different attribute values.
+
+Example object instantiation:
+
+
+student1 = Student("Alice", 20, "Computer Science")
+student2 = Student("Bob", 22, "Engineering")
+
+account1 = BankAccount("123456", 1000)
+account2 = BankAccount("789012", 500)
+
+
+c. Have them interact with the objects by calling methods and modifying attributes. For instance, they can call methods to display information about objects, deposit and withdraw money from bank accounts, or perform actions related to the classes they have defined.
+
+Example object interactions:
+
+
+student1.display_info()
+student2.display_info()
+
+account1.deposit(500)
+account2.withdraw(200)
+
+
+Instruct the students to display the results of object interactions and attribute modifications using the print() function. Include clear and informative output messages.
+
+Save the Python program with an appropriate filename, such as "class_and_object_creation.py."
+
+Ask them to run the Python program to verify that it executes correctly and produces the expected results.
+
+Submission:
+
+After completing the assignment, students should save their Python program file (e.g., class_and_object_creation.py).
+
+They should create a ZIP file containing the Python program file and any additional files if necessary.
+
+Instruct them to upload the ZIP file to the course's assignment submission portal.
+
+Evaluation Criteria:
+
+Proper creation of classes with attributes and methods.
+Correct instantiation of objects from the defined classes.
+Accurate interaction with objects, including method calls and attribute modifications.
+Clear and informative output messages.
+Adherence to the submission instructions.

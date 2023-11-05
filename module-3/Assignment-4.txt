@@ -1,0 +1,98 @@
+Introduction to NumPy
+
+Objective: To introduce students to the NumPy library.
+
+Task:
+In this assignment, you will introduce students to the NumPy library by asking them to install NumPy and create a Python program that showcases basic NumPy functionalities. They should create NumPy arrays with different data types, perform array arithmetic operations, and use NumPy functions to calculate statistics like mean, median, and standard deviation.
+
+Instructions:
+
+Instruct the students to install the NumPy library using a package manager like pip if they haven't already. They can use the following command:
+
+
+pip install numpy
+
+
+Ask the students to open their preferred text editor or integrated development environment (IDE) for Python.
+
+Create a Python program that does the following using NumPy:
+
+a. Import the NumPy library at the beginning of the program:
+
+
+import numpy as np
+
+
+b. Create NumPy arrays with different data types (e.g., integers, floats) and different dimensions (1D, 2D). Encourage them to experiment with arrays of their own design.
+
+Example array definitions:
+
+
+# 1D array of integers
+arr1 = np.array([1, 2, 3, 4, 5])
+
+# 2D array of floats
+arr2 = np.array([[1.1, 2.2, 3.3], [4.4, 5.5, 6.6]])
+
+# Create your own NumPy arrays with different data types and dimensions
+
+
+c. Perform array arithmetic operations on these arrays, such as addition, subtraction, multiplication, and division.
+
+Example array operations:
+
+
+# Addition
+result_add = arr1 + arr1
+
+# Subtraction
+result_sub = arr2 - arr2
+
+# Multiplication
+result_mul = arr1 * 2
+
+# Division
+result_div = arr2 / 2
+
+# Perform other array arithmetic operations
+
+
+d. Use NumPy functions to calculate statistics like mean, median, and standard deviation for the created arrays.
+
+Example statistics calculations:
+
+
+# Calculate mean
+mean = np.mean(arr1)
+
+# Calculate median
+median = np.median(arr2)
+
+# Calculate standard deviation
+std_dev = np.std(arr1)
+
+# Calculate other statistics using NumPy functions
+
+
+Display the results of array operations and statistics calculations using the print() function. Include clear and informative output messages.
+
+Save your Python program with an appropriate filename, such as "numpy_intro.py."
+
+Run your Python program to verify that it executes correctly and produces the expected results.
+
+Submission:
+
+After completing the assignment, save your Python program file (e.g., numpy_intro.py).
+
+Create a ZIP file containing your Python program file and any additional files if necessary.
+
+Upload the ZIP file to the course's assignment submission portal.
+
+Evaluation Criteria:
+
+Successful installation and use of the NumPy library.
+Proper creation and manipulation of NumPy arrays with different data types and dimensions.
+Correct implementation of array arithmetic operations.
+Accurate calculation of statistics using NumPy functions.
+Clear and informative output messages.
+Adherence to the submission instructions.

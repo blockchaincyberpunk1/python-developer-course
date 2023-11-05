@@ -1,0 +1,97 @@
+Object-Oriented File Handling 
+
+Objective: To combine OOP and file handling concepts.
+
+Task:
+This is an optional advanced assignment that challenges students to design a Python program that uses object-oriented programming to manage files and directories. They should create classes that represent files and directories, implement methods for file operations like reading, writing, and deleting, build a directory structure using these classes, and demonstrate file management.
+
+Instructions:
+
+Instruct the students to open their preferred text editor or integrated development environment (IDE) for Python.
+
+Ask them to create a Python program that does the following:
+
+a. Define a base class (parent class) called FileSystemElement that represents a generic file or directory. This class should have attributes to store the element's name and location (path).
+
+Example base class definition:
+
+
+class FileSystemElement:
+    def __init__(self, name, location):
+        self.name = name
+        self.location = location
+
+
+b. Define two derived classes (child classes) called File and Directory that inherit from the FileSystemElement class. The File class should have methods for reading and writing file content, while the Directory class should have methods for managing its contents (e.g., adding files and directories).
+
+Example derived class definitions:
+
+
+class File(FileSystemElement):
+    def __init__(self, name, location):
+        super().__init__(name, location)
+        self.content = ""
+
+    def read_content(self):
+        # Implement reading file content logic
+        pass
+
+    def write_content(self, data):
+        # Implement writing file content logic
+        pass
+
+class Directory(FileSystemElement):
+    def __init__(self, name, location):
+        super().__init__(name, location)
+        self.contents = []
+
+    def add_file(self, file):
+        # Implement adding files to the directory logic
+        pass
+
+    def add_directory(self, directory):
+        # Implement adding directories to the directory logic
+        pass
+
+
+c. Encourage students to create instances (objects) of the File and Directory classes, organize them into a directory structure, and perform file management operations. They can read and write file content, add files and subdirectories to directories, and delete files or directories.
+
+Example object instantiation and file management operations:
+
+
+root_directory = Directory("Root", "/")
+
+file1 = File("file1.txt", "/root/")
+file2 = File("file2.txt", "/root/")
+
+sub_directory = Directory("Subdirectory", "/root/")
+
+root_directory.add_file(file1)
+root_directory.add_file(file2)
+root_directory.add_directory(sub_directory)
+
+file1.write_content("Hello, world!")
+
+
+Instruct them to display the results of file management operations using the print() function. Include clear and informative output messages.
+
+Encourage students to create a directory structure, perform various file operations, and demonstrate how the classes interact with each other.
+
+Save the Python program with an appropriate filename, such as "object_oriented_file_handling.py."
+
+Submission:
+
+If students choose to complete this optional assignment, they can submit the following:
+
+The Python script or Jupyter Notebook file used for object-oriented file handling (e.g., file_handling.py or file_handling.ipynb).
+Any additional data files or directories required for the demonstration.
+Students should create a ZIP file containing the above files and upload it to the course's assignment submission portal.
+
+Evaluation Criteria:
+
+Proper definition of classes for representing files and directories.
+Accurate implementation of methods for file operations.
+Correct organization of files and directories in a directory structure.
+Accurate demonstration of file management operations.
+Clear and informative output messages.
+Adherence to the submission instructions (if submitted).

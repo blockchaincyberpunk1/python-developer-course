@@ -1,0 +1,72 @@
+Creating a To-Do List Application 
+
+Objective: To apply Python fundamentals to real-world application development.
+
+Task:
+This is an optional advanced assignment that challenges students to create a command-line to-do list application in Python. The program should allow users to add, view, and remove tasks from their to-do list. This assignment incorporates functions, data structures, and user interaction.
+
+Instructions:
+
+Open your preferred text editor or integrated development environment (IDE) for Python.
+
+Create a Python program that implements a to-do list application with the following features:
+
+a. Define an empty list to represent the user's to-do list.
+
+
+todo_list = []
+
+
+b. Define functions for the following actions:
+
+Adding a task to the to-do list.
+Viewing the tasks in the to-do list.
+Removing a task from the to-do list.
+For example:
+
+
+def add_task(task):
+    todo_list.append(task)
+
+def view_tasks():
+    for i, task in enumerate(todo_list, start=1):
+        print(f"{i}. {task}")
+
+def remove_task(index):
+    if 1 <= index <= len(todo_list):
+        removed_task = todo_list.pop(index - 1)
+        print(f"Removed: {removed_task}")
+    else:
+        print("Invalid index.")
+
+
+c. Implement a loop that allows the user to perform the following actions:
+
+Add a task by entering a description.
+View the current tasks in the to-do list.
+Remove a task by specifying its index.
+d. Display a menu to the user with options for each action and allow them to navigate the menu.
+
+e. Ensure that your program handles invalid user input gracefully and provides clear instructions and feedback.
+
+Test your to-do list application by adding, viewing, and removing tasks to ensure that it functions correctly.
+
+Save your Python program with an appropriate filename, such as "todo_list_app.py."
+
+Run your Python program to verify that it executes correctly and provides the expected user experience.
+
+Submission (Optional):
+
+If you choose to complete this optional assignment, you can save your Python program file (e.g., todo_list_app.py).
+
+Create a ZIP file containing your Python program file and any additional files if necessary.
+
+Upload the ZIP file to the course's assignment submission portal.
+
+Evaluation Criteria (Optional):
+
+Successful execution of the to-do list application: Does the program run without errors?
+Proper use of functions, lists, and loops to manage the to-do list.
+Correctness of task addition, viewing, and removal.
+User-friendly interface with clear instructions and feedback.
+Adherence to the submission instructions (if submitted).

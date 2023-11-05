@@ -1,0 +1,61 @@
+Simple Calculator
+
+Objective: To practice writing functions and control structures in Python.
+
+Task:
+In this assignment, you will practice writing functions and using control structures in Python by creating a simple calculator program. Your program should be capable of performing basic arithmetic operations such as addition, subtraction, multiplication, and division. Encourage students to define functions for each operation and use control structures to handle user input.
+
+Instructions:
+
+Open your preferred text editor or integrated development environment (IDE) for Python.
+
+Create a Python program that implements a simple calculator with the following features:
+
+a. Define separate functions for each of the four basic arithmetic operations:
+
+Addition
+Subtraction
+Multiplication
+Division
+For example:
+
+
+def add(x, y):
+    return x + y
+
+def subtract(x, y):
+    return x - y
+
+# Define functions for multiplication and division similarly
+
+
+b. Use control structures (if-elif-else) to handle user input and select the appropriate operation based on the user's choice.
+
+c. Prompt the user to enter two numbers and ask them to choose an operation (e.g., "+", "-", "*", "/").
+
+d. Perform the selected operation using the corresponding function and display the result to the user.
+
+e. Ensure that your program handles potential issues such as division by zero gracefully and provides clear error messages.
+
+Test your calculator program by performing various calculations, including different arithmetic operations and checking for error cases.
+
+Save your Python program with an appropriate filename, such as "simple_calculator.py."
+
+Run your Python program to verify that it executes correctly and produces the expected results.
+
+Submission:
+
+After completing the assignment, save your Python program file (e.g., simple_calculator.py).
+
+Create a ZIP file containing your Python program file and any additional files if necessary.
+
+Upload the ZIP file to the course's assignment submission portal.
+
+Evaluation Criteria:
+
+Successful execution of the program: Does the program run without errors?
+Proper implementation of functions for each arithmetic operation.
+Correctness of calculations and results.
+Handling of potential issues (e.g., division by zero) with appropriate error messages.
+User-friendly and informative interface.
+Adherence to the submission instructions.

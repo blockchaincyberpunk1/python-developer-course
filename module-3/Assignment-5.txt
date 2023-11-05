@@ -1,0 +1,51 @@
+Data Analysis with Pandas 
+
+Objective: To apply Pandas for data manipulation and analysis.
+
+Task:
+This is an optional advanced assignment that challenges students to work on a data analysis project using the Pandas library. You can provide a dataset (e.g., CSV) or allow students to choose their own dataset and ask them to complete the following tasks:
+
+Load and Clean the Data:
+a. Instruct students to load the dataset into a Pandas DataFrame.
+b. Encourage them to identify and handle missing data, duplicate records, or any data inconsistencies.
+c. Perform data type conversions if necessary.
+
+Data Exploration:
+a. Ask students to explore the dataset by summarizing key statistics (e.g., mean, median, standard deviation) of numerical columns.
+b. Have them create summary tables or visualizations to provide insights into the data distribution.
+c. Encourage them to identify and visualize trends or patterns within the dataset.
+
+Answer Specific Questions or Analyze Trends:
+a. Provide a set of specific questions or tasks related to the dataset that students need to answer or perform using Pandas functions.
+b. Examples of questions/tasks might include:
+
+Finding the top N records based on a specific criteria.
+Calculating the average, maximum, or minimum values of certain columns.
+Grouping and aggregating data to generate insights.
+Creating visualizations (e.g., bar charts, scatter plots) to visualize relationships between variables.
+Identifying outliers or anomalies in the data.
+Encourage students to document their data cleaning, exploration, and analysis processes clearly within their Python script or Jupyter Notebook. They should include comments, explanations, and visualizations where applicable to make their work understandable.
+
+Finally, have them present their findings and insights in a well-structured report, which should include:
+
+A brief introduction to the dataset and its context.
+Details of the data cleaning and preprocessing steps.
+Summary statistics, visualizations, and key insights from the data exploration and analysis.
+Answers to the specific questions or tasks assigned.
+A conclusion that summarizes their findings and any recommendations or future steps.
+Submission:
+
+If students choose to complete this optional assignment, they can submit the following:
+
+The Python script or Jupyter Notebook file used for data analysis (e.g., data_analysis.py or data_analysis.ipynb).
+Any additional data files required for the analysis.
+The report documenting their findings and insights (e.g., data_analysis_report.pdf).
+Students should create a ZIP file containing the above files and upload it to the course's assignment submission portal.
+
+Evaluation Criteria:
+
+Proper loading and cleaning of the dataset.
+Effective data exploration techniques, including summarization and visualization.
+Accurate answers to specific questions or tasks using Pandas functions.
+Clarity and completeness of the report, including documentation and insights.
+Adherence to the submission instructions (if submitted).

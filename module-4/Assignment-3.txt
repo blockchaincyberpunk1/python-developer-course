@@ -1,0 +1,69 @@
+File Handling
+
+Objective: To teach students about reading and writing files in Python.
+
+Task:
+In this assignment, you will teach students about file handling in Python by assigning them a problem that requires them to write a Python program dealing with file operations. They should read data from an external text file, process the data by performing some operation (e.g., calculation, transformation), and then write the results back to a new file.
+
+Instructions:
+
+Instruct the students to open their preferred text editor or integrated development environment (IDE) for Python.
+
+Ask them to create a Python program that does the following:
+
+a. Read data from an external text file (input file). You can provide a sample text file or allow students to choose their own.
+
+Example file reading:
+
+
+# Open and read data from an input file
+with open("input.txt", "r") as file:
+    data = file.readlines()
+
+
+b. Process the data by performing some operation on it. This operation should depend on the specific problem you assign. For example, you can ask them to calculate the sum of numbers in the file, count the occurrences of specific words, or transform the data in a certain way.
+
+Example data processing:
+
+
+# Calculate the sum of numbers in the file
+total = sum([int(line.strip()) for line in data])
+
+
+c. Write the results of the data processing to a new text file (output file). The name of the output file should be different from the input file to avoid overwriting.
+
+Example file writing:
+
+
+# Write the total to an output file
+with open("output.txt", "w") as output_file:
+    output_file.write(f"Total: {total}")
+
+
+Instruct them to display the results of the data processing and file writing using the print() function. Include clear and informative output messages.
+
+Encourage students to handle exceptions and errors related to file operations by implementing proper error handling (e.g., using try-except blocks).
+
+Save the Python program with an appropriate filename, such as "file_handling.py."
+
+Ask them to run the Python program and verify that it executes correctly and produces the expected results.
+
+Assignment Variation:
+You can vary the assignment by providing different input files and asking students to perform various operations on the data. For example, you can provide a CSV file and ask them to calculate statistics, or you can provide a text file and ask them to search for specific patterns.
+
+Submission:
+
+After completing the assignment, students should save their Python program file (e.g., file_handling.py).
+
+They should create a ZIP file containing the Python program file and any additional files if necessary.
+
+Instruct them to upload the ZIP file to the course's assignment submission portal.
+
+Evaluation Criteria:
+
+Proper reading of data from an external text file.
+Correct implementation of data processing based on the assigned task.
+Accurate writing of results to a new text file.
+Clear and informative output messages.
+Effective error handling for file operations.
+Adherence to the submission instructions.

@@ -1,0 +1,54 @@
+Basic Algorithm Implementation in Python
+
+Objective: To practice algorithmic thinking and problem-solving.
+
+Task:
+In this assignment, you will practice algorithmic thinking and problem-solving by implementing Python programs to solve simple mathematical problems. Choose one of the following problems to solve and write a Python program to tackle it.
+
+Choose one of the following problems:
+
+Problem 1: Factorial Calculator
+
+Create a Python program that calculates the factorial of a positive integer.
+The factorial of a number n (denoted as n!) is the product of all positive integers from 1 to n.
+Implement this using a loop or a recursive function.
+Display the result.
+Problem 2: Prime Number Checker
+
+Develop a Python program that checks whether a given number is prime or not.
+Ask the user to input a positive integer.
+Use a loop to check if the number is divisible by any integers other than 1 and itself.
+Display whether the number is prime or not.
+Problem 3: Fibonacci Sequence Generator
+
+Create a Python program that generates the Fibonacci sequence up to a specified number of terms (e.g., 10, 20, or any user-defined limit).
+Use a loop or a recursive function to calculate each term in the sequence.
+Display the generated Fibonacci sequence.
+Problem 4: Palindrome Checker
+
+Write a Python program that checks if a given string is a palindrome.
+A palindrome is a word, phrase, or sequence that reads the same backward as forward (ignoring spaces, punctuation, and capitalization).
+Implement this using loops and string manipulation functions.
+Display whether the input string is a palindrome or not.
+Problem 5: Sum of Digits
+
+Create a Python program that calculates the sum of the digits of a positive integer.
+Ask the user to input an integer.
+Use loops and arithmetic operations to find and display the sum of its digits.
+Ensure that your Python program is well-documented, includes clear explanations and comments, and handles potential edge cases gracefully.
+
+Submission:
+
+After completing the assignment, save your Python program with an appropriate filename related to the problem you chose (e.g., "factorial_calculator.py").
+
+Create a ZIP file containing your Python program file and any additional files if necessary.
+
+Upload the ZIP file to the course's assignment submission portal.
+
+Evaluation Criteria:
+
+Successful execution of the program: Does the program run without errors?
+Correctness of the solution: Does the program solve the chosen problem effectively?
+Proper use of algorithms and control structures.
+Clear and informative code documentation.
+Adherence to the submission instructions.

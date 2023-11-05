@@ -1,0 +1,61 @@
+Working with Lists and Loops
+
+Objective: To practice working with Python lists and loops.
+
+Task:
+In this assignment, you will practice your skills in working with Python lists and loops. You are required to write a Python program that performs operations on lists. For example, you can calculate the sum, average, or find the maximum and minimum values of a list of numbers using loops.
+
+Instructions:
+
+Open your preferred text editor or integrated development environment (IDE) for Python.
+
+Create a Python program that does the following:
+
+a. Define a list of numbers (e.g., integers or floats). You can choose the size and values of the list.
+
+Example list definition:
+
+
+numbers = [5, 12, 8, 17, 3, 21]
+
+
+b. Implement loops to perform the following operations on the list:
+
+Calculate the sum of all the numbers in the list.
+Calculate the average (mean) of the numbers in the list.
+Find the maximum value in the list.
+Find the minimum value in the list.
+You should use separate loops for each operation.
+
+Example:
+
+
+# Calculate the sum
+total = 0
+for number in numbers:
+    total += number
+
+
+c. Display the results of each operation to the user using the print() function. Include clear and informative output messages.
+
+Test your Python program with different lists of numbers to ensure it calculates the sum, average, maximum, and minimum correctly.
+
+Save your Python program with an appropriate filename, such as "list_operations.py."
+
+Run your Python program to verify that it executes correctly and produces the expected results.
+
+Submission:
+
+After completing the assignment, save your Python program file (e.g., list_operations.py).
+
+Create a ZIP file containing your Python program file and any additional files if necessary.
+
+Upload the ZIP file to the course's assignment submission portal.
+
+Evaluation Criteria:
+
+Successful execution of the program: Does the program run without errors?
+Proper use of loops to perform list operations.
+Correctness of calculations for sum, average, maximum, and minimum values.
+Clear and informative output messages.
+Adherence to the submission instructions.

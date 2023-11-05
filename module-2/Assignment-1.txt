@@ -1,0 +1,59 @@
+Python Basics
+
+Objective: To get students started with Python syntax.
+
+Task:
+In this assignment, you will practice the fundamentals of Python programming by writing a Python program that covers various basic concepts. Your program should include variable declarations, basic arithmetic operations, the use of the print statement, and conditional statements (if-else) to handle user input.
+
+Instructions:
+
+Open your preferred text editor or integrated development environment (IDE) for Python.
+
+Create a Python program that does the following:
+
+a. Declare variables of different data types:
+
+A string variable (e.g., name) containing your name.
+An integer variable (e.g., age) with your age.
+A float variable (e.g., height) with your height in meters.
+Another integer variable (e.g., lucky_number) with a number of your choice.
+Example variable declarations:
+
+
+name = "John Doe"
+age = 25
+height = 1.75
+lucky_number = 7
+
+b. Perform basic arithmetic operations using these variables:
+
+Calculate your birth year by subtracting your age from the current year (you can assume the current year is 2023).
+Calculate your age in months (considering 12 months in a year).
+Calculate your age in days (considering an average of 365 days in a year).
+Calculate the result of adding your age and your lucky number.
+c. Use conditional statements (if-else) to handle user input:
+
+Prompt the user to enter their favorite color.
+If the color matches your favorite color (you can choose any color you like), display a message like "We both like [favorite_color]!" Otherwise, display a message like "Our favorite colors are different."
+Display the results of the calculations and conditional statements using the print() function. Include clear and informative output messages.
+
+Save your Python program with an appropriate filename, such as "python_basics_assignment.py."
+
+Run your Python program to verify that it executes correctly and produces the expected results.
+
+Submission:
+
+After completing the assignment, save your Python program file (e.g., python_basics_assignment.py).
+
+Create a ZIP file containing your Python program file and any additional files if necessary.
+
+Upload the ZIP file to the course's assignment submission portal.
+
+Evaluation Criteria:
+
+Successful execution of the program: Does the program run without errors?
+Proper use of variables and data types.
+Correctness of calculations and results.
+Proper implementation of conditional statements (if-else).
+Clear and informative output messages.
+Adherence to the submission instructions.

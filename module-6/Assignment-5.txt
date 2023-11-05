@@ -1,0 +1,35 @@
+Advanced API Features (Optional)
+
+Objective: To challenge advanced learners and explore more complex API features.
+
+Task:
+In this optional assignment for advanced students, they will extend their Flask or Django API by adding advanced features. They should choose one or more of the following advanced features to implement:
+
+Implementing authentication and access control for API endpoints.
+Adding pagination, filtering, and sorting options for resource retrieval.
+Incorporating file uploads and downloads via the API.
+Implementing data validation using serialization and deserialization libraries like Marshmallow (Flask) or Django REST framework serializers (Django).
+Instructions:
+
+Advise advanced students to choose one or more advanced features from the list above, depending on their interests and previous experience with API development.
+
+If they choose to implement authentication and access control, they should consider using libraries like Flask-HTTPAuth (Flask) or Django's built-in authentication system with token-based authentication (e.g., JWT).
+
+If they decide to add pagination, filtering, and sorting options, students should design API endpoints that allow clients to request a subset of resources, filter resources based on criteria, and sort resources based on specific fields. Libraries like Flask-RESTful's reqparse or Django REST framework's filtering and pagination classes can be useful.
+
+If students are interested in incorporating file uploads and downloads, they should create API endpoints that allow users to upload files (e.g., images, documents) and download files from the server. Flask-Uploads (Flask) or Django REST framework's file upload capabilities can be considered.
+
+If they choose to implement data validation using serialization and deserialization libraries, students should use libraries like Marshmallow (Flask) or Django REST framework serializers (Django) to define schemas for their API resources. These libraries enable validation, data conversion, and serialization/deserialization of data between API requests and database models.
+
+Encourage students to thoroughly test the advanced features they implement, ensuring that authentication works as expected, pagination and filtering options function correctly, file uploads and downloads are successful, or data validation provides meaningful error messages.
+
+Remind students to update their API documentation (e.g., README file) to include information about the advanced features they added, along with examples of how to use these features.
+
+Inform students that this assignment is optional and is intended for those who want to challenge themselves with more complex API development concepts.
+
+Advise them to submit their extended API project, including code, documentation, and any additional files or libraries they used, as a ZIP file through the course's assignment submission portal.
+
+Evaluation Criteria:
+Evaluation criteria for this assignment will depend on the specific advanced features chosen by the students. Assessment will be based on the correct implementation of the selected features, the functionality of the API, thorough testing, and the clarity of documentation provided.
+
+Please note that the evaluation criteria may vary depending on the features implemented by each student.

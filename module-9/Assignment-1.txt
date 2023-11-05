@@ -1,0 +1,76 @@
+Contribution to an Open-Source Python Project
+
+Objective: To engage with the Python open-source community through code contributions.
+
+Task:
+In this assignment, students will contribute to an open-source Python project that interests them. They should fork the project repository, choose an issue or feature to work on (preferably beginner-friendly issues for the first contribution), create a branch, make code changes, and submit a pull request. They should also collaborate with project maintainers and follow community guidelines for contributing.
+
+Instructions:
+
+Instruct students to explore popular open-source Python projects on platforms like GitHub. They should select a project that aligns with their interests and skill level. Emphasize the importance of choosing projects with active maintainers and a welcoming community.
+
+Encourage students to create a GitHub account if they don't have one already and to fork the selected project's repository. Forking creates a copy of the project in their GitHub account.
+
+Example code to fork a repository:
+
+Instruct students to visit the project's GitHub page and click the "Fork" button in the top-right corner.
+Ask students to explore the project's issues or feature requests to find a task they'd like to work on. They should start with issues labeled as "beginner-friendly" or "good first issue" if available. Ensure that they read the issue descriptions carefully and understand the problem or feature request.
+
+Instruct students to create a branch in their forked repository for the specific issue they plan to work on. The branch name should be descriptive of the task.
+
+Example code to create a branch locally:
+
+
+git checkout -b my-feature-branch
+
+
+Guide students to make code changes to address the selected issue. They should follow the project's coding conventions and style guidelines.
+
+Encourage students to commit their changes to the branch, including meaningful commit messages. Explain the importance of clear and descriptive commit messages.
+
+Example code to commit changes:
+
+
+git add .
+git commit -m "Fix issue #123: Added feature X"
+
+
+Instruct students to push their branch and changes to their forked repository on GitHub.
+
+Example code to push changes:
+
+
+git push origin my-feature-branch
+
+
+Ask students to navigate to their forked repository on GitHub and click the "New Pull Request" button to create a pull request (PR). They should select the branch they created as the source branch and the original project's branch as the target branch.
+
+Encourage students to provide a clear and detailed description of their changes in the pull request. They should explain the problem they are addressing and how their changes solve it.
+
+Instruct students to follow any project-specific contribution guidelines, such as code review processes or documentation requirements. They should be prepared to engage in discussions with project maintainers if necessary.
+
+Emphasize that the quality of their contribution is more important than the quantity of contributions. Encourage them to be patient and receptive to feedback from the open-source community.
+
+Ask students to monitor their pull request and collaborate with project maintainers as needed. They should be prepared to make updates to their code based on feedback.
+
+Instruct students to write a reflection or summary of their open-source contribution experience. They should describe the project they contributed to, the issue they worked on, the challenges they faced, and what they learned from the experience.
+
+Finally, ask students to submit their pull request URL and the reflection as part of their assignment.
+
+Assignment Variation:
+To provide students with a more structured experience, you can suggest specific open-source Python projects that are welcoming to beginners and align with the course content. Additionally, you can offer guidance on selecting an appropriate issue or feature to work on.
+
+Submission:
+
+After completing the assignment, students should submit the URL of their pull request and their reflection or summary through the course's assignment submission portal.
+Evaluation Criteria:
+
+Selection of an appropriate open-source Python project.
+Creation of a meaningful and well-documented pull request.
+Engagement with the open-source community and collaboration with project maintainers.
+Adherence to project-specific contribution guidelines and coding conventions.
+Thoughtful reflection on the open-source contribution experience.
+Adherence to the submission instructions.
+
+
+

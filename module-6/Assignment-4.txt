@@ -1,0 +1,142 @@
+RESTful API Development with Flask
+
+Objective: To teach students how to build a RESTful API using Flask.
+
+Task:
+In this assignment, students will create a Flask-based RESTful API for a specific use case. They should define API endpoints for resource creation, retrieval, updating, and deletion, implement data validation and error handling for API requests, use Flask-RESTful or similar libraries for building the API, and document the API endpoints and usage in a README file.
+
+Instructions:
+
+Instruct students to open their preferred text editor or integrated development environment (IDE) for Python.
+
+Ask them to create a directory for the Flask project and navigate to this directory in the terminal or command prompt.
+
+Guide students to set up a virtual environment to isolate their project's dependencies by running the following commands:
+
+
+# Create a virtual environment
+python -m venv venv
+
+# Activate the virtual environment
+# On Windows
+venv\Scripts\activate
+# On macOS and Linux
+source venv/bin/activate
+
+
+Instruct them to install Flask and Flask-RESTful within the virtual environment using pip:
+
+
+pip install Flask Flask-RESTful
+
+
+Encourage students to define a specific use case for their API (e.g., a task management API, a blog API, or an inventory API).
+
+Instruct them to create a Python file (e.g., "app.py") for their Flask application and set up the Flask project by importing Flask and Flask-RESTful:
+
+
+from flask import Flask
+from flask_restful import Api, Resource
+
+app = Flask(__name__)
+api = Api(app)
+
+
+Guide students to define the data model and create a list or dictionary to store sample data. They should create a RESTful API resource by subclassing Resource from Flask-RESTful and define API endpoints for resource creation, retrieval, updating, and deletion.
+
+Example resource definition for a task management API:
+
+
+tasks = {
+    1: {"title": "Task 1", "description": "Description for Task 1"},
+    2: {"title": "Task 2", "description": "Description for Task 2"},
+}
+
+class TaskResource(Resource):
+    def get(self, task_id):
+        # Retrieve a single task
+        pass
+
+    def put(self, task_id):
+        # Update a task
+        pass
+
+    def delete(self, task_id):
+        # Delete a task
+        pass
+
+class TaskListResource(Resource):
+    def get(self):
+        # Retrieve all tasks
+        pass
+
+    def post(self):
+        # Create a new task
+        pass
+
+
+Instruct students to add API routes and resource classes to their Flask application:
+
+
+api.add_resource(TaskListResource, '/tasks')
+api.add_resource(TaskResource, '/tasks/<int:task_id>')
+
+
+Guide them to implement data validation and error handling for API requests. They should handle cases where resources are not found, validation fails, or other errors occur.
+
+Example data validation in a resource method:
+
+
+from flask_restful import abort, reqparse
+
+parser = reqparse.RequestParser()
+parser.add_argument('title', type=str, required=True, help='Title is required')
+
+class TaskResource(Resource):
+    def put(self, task_id):
+        args = parser.parse_args()
+        task = tasks.get(task_id)
+        if not task:
+            abort(404, message=f'Task {task_id} not found')
+        # Update the task with args['title']
+        pass
+
+
+Instruct students to document the API endpoints, expected request payloads, and responses in a README file. They should include information on how to use the API, examples of API requests and responses, and any authentication requirements if applicable.
+
+Ask students to run their Flask API by adding the following code at the end of their "app.py" file:
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
+Instruct them to run the Flask development server using the following command:
+
+
+python app.py
+
+
+Encourage students to use tools like Postman or curl to test their API endpoints by sending HTTP requests (GET, POST, PUT, DELETE) to the defined endpoints.
+
+Remind students to thoroughly test their API, including data validation, error handling, and edge cases.
+
+Save the Python file ("app.py") and the README file with appropriate filenames.
+
+Assignment Variation:
+To make the assignment more advanced, students can explore additional features such as authentication with tokens (e.g., JWT), pagination, versioning, or adding database storage for resources.
+
+Submission:
+
+After completing the assignment, students should create a ZIP file containing the entire Flask project directory, including all code files, the README file, and any additional documentation.
+
+Instruct them to upload the ZIP file to the course's assignment submission portal.
+
+Evaluation Criteria:
+
+Proper setup of Flask and Flask-RESTful.
+Accurate definition of RESTful API resources and endpoints.
+Implementation of data validation and error handling.
+Thorough testing of API functionality.
+Clear and comprehensive documentation in the README file.
+Adherence to the submission instructions.

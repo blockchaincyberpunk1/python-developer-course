@@ -1,0 +1,48 @@
+Reading Python Documentation and Tutorials
+
+Objective: To encourage continuous learning by exploring Python's official documentation and online tutorials.
+
+Task:
+In this assignment, students will choose a Python topic or library they want to learn more about and delve into the official Python documentation or online tutorials. They should study the documentation or tutorials thoroughly, experiment with code examples and exercises provided, and summarize what they've learned. Finally, they should share their findings with their peers in a written report or presentation.
+
+Instructions:
+
+Ask students to select a Python topic or library they are interested in learning more about. This could be a specific Python module, library (e.g., NumPy, Pandas, Matplotlib), or topic (e.g., decorators, generators).
+
+Instruct students to explore the official Python documentation (https://docs.python.org/3/) or reliable online tutorials/resources related to their chosen topic. They should focus on learning the core concepts and practical usage.
+
+Encourage students to take notes, experiment with code examples provided in the documentation or tutorials, and attempt exercises or challenges if available.
+
+Instruct students to thoroughly explore the chosen topic or library, ensuring they understand key concepts, functions, methods, and best practices.
+
+Ask students to summarize their learning in a written report or presentation. They should include the following in their report:
+
+An introduction to the chosen topic or library.
+Key concepts and functionalities they learned.
+Code examples and experiments they conducted.
+Any challenges or insights they encountered during the learning process.
+How they envision applying their new knowledge in practical Python projects.
+Encourage students to include visuals, such as code snippets, diagrams, or screenshots, to enhance their reports or presentations.
+
+Instruct students to share their reports or presentations with their peers during a class session or through a designated platform for collaboration.
+
+Encourage a discussion among students to share their findings, ask questions, and provide feedback on each other's presentations.
+
+Remind students that this assignment aims to promote continuous learning, and they should be prepared to answer questions and engage in discussions about their chosen topic.
+
+Finally, ask students to submit their written reports or presentation materials as part of their assignment.
+
+Assignment Variation:
+To add an element of exploration and creativity, you can suggest that students choose a Python library or topic that is not part of the standard course curriculum. This allows them to explore niche or specialized areas of Python.
+
+Submission:
+
+After completing the assignment, students should submit their written reports or presentation materials through the course's assignment submission portal.
+Evaluation Criteria:
+
+Selection of an interesting and relevant Python topic or library.
+Thorough exploration of official Python documentation or online tutorials.
+Clear and concise summarization of key concepts and functionalities.
+Effective use of visuals to enhance reports or presentations.
+Active participation in discussions and peer sharing.
+Adherence to the submission instructions.

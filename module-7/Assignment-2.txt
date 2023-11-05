@@ -1,0 +1,75 @@
+Multiprocessing in Python
+
+Objective: To explore multiprocessing for parallel execution.
+
+Task:
+In this assignment, students will extend their knowledge by implementing a Python program that uses multiprocessing. They should create multiple processes to achieve parallelism, divide a CPU-intensive task among processes, and measure and compare the execution time with and without multiprocessing.
+
+Instructions:
+
+Instruct students to open their preferred text editor or integrated development environment (IDE) for Python.
+
+Ask them to create a Python script (e.g., "multiprocessing_example.py") for this assignment.
+
+Encourage students to choose a CPU-intensive task that can benefit from parallel processing. Examples include calculating Fibonacci numbers, generating prime numbers, or performing matrix multiplication.
+
+Guide students to implement the task in two different ways: one with a single-threaded approach (sequential execution) and another using multiprocessing.
+
+When implementing the multiprocessing version, instruct them to use the multiprocessing module in Python to create multiple processes. Each process should handle a subtask of the overall computation.
+
+Example code for creating multiple processes:
+
+
+import multiprocessing
+
+def worker_function(subtask_parameters):
+    # Implement subtask logic here
+    pass
+
+if __name__ == '__main__':
+    # Create a pool of processes
+    with multiprocessing.Pool(processes=num_processes) as pool:
+        results = pool.map(worker_function, subtask_parameters_list)
+
+
+Encourage students to measure and compare the execution time of both the single-threaded and multiprocessing approaches. They can use the time module to record the start and end times of each version and calculate the execution time difference.
+
+Example code to measure execution time:
+
+
+import time
+
+# Record start time
+start_time = time.time()
+
+# Execute the task (single-threaded or multiprocessing)
+
+# Record end time
+end_time = time.time()
+
+# Calculate execution time
+execution_time = end_time - start_time
+
+
+Ask students to document their findings and observations in a report. They should explain the task they chose, describe the implementation of both the single-threaded and multiprocessing versions, discuss any challenges faced during multiprocessing, and present the results of their execution time comparison.
+
+Encourage them to include their Python script and the report in their assignment submission.
+
+Remind students to test their code thoroughly to ensure correctness.
+
+Assignment Variation:
+To make the assignment more challenging, students can explore more complex parallelism concepts such as shared memory, message passing, or using the concurrent.futures module for asynchronous execution.
+
+Submission:
+
+After completing the assignment, students should create a ZIP file containing their Python script, the report in a suitable format (e.g., PDF or Markdown), and any additional documentation.
+
+Instruct them to upload the ZIP file to the course's assignment submission portal.
+
+Evaluation Criteria:
+
+Correct implementation of both single-threaded and multiprocessing versions of the task.
+Accurate measurement and comparison of execution times.
+Clear and well-documented report explaining the task, implementation, challenges, and results.
+Thorough testing of the code to ensure correctness.
+Adherence to the submission instructions.

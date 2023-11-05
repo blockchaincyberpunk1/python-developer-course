@@ -1,0 +1,90 @@
+Inheritance and Polymorphism
+
+Objective: To reinforce the concept of inheritance and polymorphism in Python.
+
+Task:
+In this assignment, you will reinforce the concepts of inheritance and polymorphism in Python by asking students to create a Python program that showcases these concepts. They should define a base class and one or more derived classes that inherit from it, override methods in the derived classes to demonstrate polymorphism, and create instances of both base and derived classes to illustrate inheritance.
+
+Instructions:
+
+Instruct the students to open their preferred text editor or integrated development environment (IDE) for Python.
+
+Ask them to create a Python program that does the following:
+
+a. Define a base class (parent class) with meaningful attributes and methods.
+
+Example base class definition:
+
+
+class Animal:
+    def __init__(self, name, species):
+        self.name = name
+        self.species = species
+
+    def speak(self):
+        pass  # This method will be overridden in derived classes
+
+
+b. Define one or more derived classes (child classes) that inherit from the base class. Each derived class should add its unique attributes and override methods from the base class to demonstrate polymorphism.
+
+Example derived class definition:
+
+
+class Dog(Animal):
+    def __init__(self, name, breed):
+        super().__init__(name, species="Dog")
+        self.breed = breed
+
+    def speak(self):
+        return "Woof!"
+
+
+c. Encourage students to create additional derived classes, each with its own attributes and overridden methods.
+
+Example additional derived class definition:
+
+
+class Cat(Animal):
+    def __init__(self, name, color):
+        super().__init__(name, species="Cat")
+        self.color = color
+
+    def speak(self):
+        return "Meow!"
+
+
+d. Instruct them to create instances (objects) of both the base and derived classes, and call methods on these instances to demonstrate inheritance and polymorphism.
+
+Example object instantiation and method calls:
+
+
+animal = Animal("Generic Animal", species="Unknown")
+dog = Dog("Buddy", breed="Golden Retriever")
+cat = Cat("Whiskers", color="Gray")
+
+print(animal.speak())  # Output: No specific sound
+print(dog.speak())     # Output: Woof!
+print(cat.speak())     # Output: Meow!
+
+
+Ask them to display the results of method calls using the print() function. Include clear and informative output messages.
+
+Save the Python program with an appropriate filename, such as "inheritance_and_polymorphism.py."
+
+Instruct them to run the Python program to verify that it executes correctly and produces the expected results.
+
+Submission:
+
+After completing the assignment, students should save their Python program file (e.g., inheritance_and_polymorphism.py).
+
+They should create a ZIP file containing the Python program file and any additional files if necessary.
+
+Instruct them to upload the ZIP file to the course's assignment submission portal.
+
+Evaluation Criteria:
+
+Proper definition of base and derived classes with attributes and methods.
+Accurate instantiation of objects from the base and derived classes.
+Correct implementation of method overriding to demonstrate polymorphism.
+Clear and informative output messages.
+Adherence to the submission instructions.

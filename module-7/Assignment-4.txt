@@ -1,0 +1,84 @@
+Unit Testing and Test Cases
+
+Objective: To teach unit testing and writing test cases in Python.
+
+Task:
+In this assignment, students will develop a Python program with functions that need testing. They should write unit tests using the unittest or pytest framework, create test cases to cover various scenarios (including edge cases and exceptions), and implement test fixtures and assertions to validate function behavior.
+
+Instructions:
+
+Instruct students to open their preferred text editor or integrated development environment (IDE) for Python.
+
+Ask them to create a Python script (e.g., "test_functions.py") for this assignment. This script will contain both the functions to be tested and the unit tests.
+
+Guide students to identify functions in their program that require testing. These functions can be chosen based on their Python project or provided by the instructor for the assignment.
+
+For unit testing, students can choose one of the following testing frameworks:
+
+unittest (Python's built-in testing framework)
+pytest (a popular third-party testing framework)
+Students should install the chosen framework if it's not already installed. For example, if using pytest, they can install it using pip:
+
+
+pip install pytest
+
+
+Instruct students to write unit tests for the identified functions. Each unit test should be written as a separate test function, and test functions should be named descriptively.
+
+Example test function using unittest:
+
+
+import unittest
+
+def add(a, b):
+    return a + b
+
+class TestMathFunctions(unittest.TestCase):
+    def test_addition(self):
+        self.assertEqual(add(2, 3), 5)
+
+if __name__ == '__main__':
+    unittest.main()
+
+
+Example test function using pytest:
+
+
+def add(a, b):
+    return a + b
+
+def test_addition():
+    assert add(2, 3) == 5
+
+
+Encourage students to create test cases that cover various scenarios, including normal inputs, edge cases (e.g., empty lists, boundary values), and exceptions (e.g., division by zero, invalid inputs). Test cases should thoroughly exercise the functions under test.
+
+Explain the concept of test fixtures if using unittest. Students can create fixtures to set up common test data or resources before running tests.
+
+Instruct students to add assertions within their test cases using appropriate assertion methods provided by the testing framework (e.g., assertEqual, assertRaises, assertIn, etc.).
+
+Ask students to run their unit tests to verify the correctness of their functions. They can do this by executing the test script (e.g., python test_functions.py) or using the testing framework's command-line tool (e.g., pytest).
+
+Encourage them to review the test results to identify any failures or errors and then debug and fix their code accordingly.
+
+Remind students to document their testing process and include comments explaining their test cases and assertions in their test script.
+
+Encourage them to submit their Python script containing the tested functions, the test script with unit tests, and any additional documentation they find relevant.
+
+Assignment Variation:
+To make the assignment more advanced, students can explore topics like mocking external dependencies using libraries like unittest.mock or pytest-mock, and using code coverage tools to measure test coverage.
+
+Submission:
+
+After completing the assignment, students should create a ZIP file containing their Python script with tested functions, the test script with unit tests, any necessary testing framework configuration files (e.g., pytest.ini), and any additional documentation.
+
+Instruct them to upload the ZIP file to the course's assignment submission portal.
+
+Evaluation Criteria:
+
+Correct implementation of unit tests for the chosen functions.
+Thorough test coverage, including normal inputs, edge cases, and exceptions.
+Appropriate use of assertion methods and fixtures (if using unittest).
+Successful execution of tests with no failures or errors.
+Clear and well-documented test cases and assertions.
+Adherence to the submission instructions.

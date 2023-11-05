@@ -1,0 +1,172 @@
+User Authentication with Django
+
+Objective: To teach students about user authentication in Django.
+
+Task:
+In this assignment, you will instruct students to enhance their Django blog from the previous assignment by adding user authentication features. They should implement user registration and login functionality, restrict access to certain views to authenticated users, allow logged-in users to create, edit, and delete their own blog posts, and implement user logout functionality.
+
+Instructions:
+
+Instruct the students to open their Django project, which includes the blog app from the previous assignment.
+
+Ask them to install Django's built-in authentication system by adding 'django.contrib.auth' to the INSTALLED_APPS list in the project's settings (settings.py).
+
+
+# settings.py
+
+INSTALLED_APPS = [
+    # ...
+    'django.contrib.auth',
+    # ...
+]
+
+
+Run the following command to create the necessary database tables for user authentication:
+
+
+python manage.py migrate
+
+
+Implement user registration and login functionality by creating view functions and templates for user registration and login forms. Encourage students to use Django's built-in forms and views.
+
+Example registration and login views ("views.py" within the "blog" app):
+
+
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth import login, logout
+from django.shortcuts import render, redirect
+
+def register(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect('post_list')
+    else:
+        form = UserCreationForm()
+    return render(request, 'registration/register.html', {'form': form})
+
+def user_login(request):
+    if request.method == 'POST':
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid():
+            user = form.get_user()
+            login(request, user)
+            return redirect('post_list')
+    else:
+        form = AuthenticationForm()
+    return render(request, 'registration/login.html', {'form': form})
+
+
+Example registration and login templates ("templates/registration/register.html" and "templates/registration/login.html"):
+
+
+<!-- register.html -->
+<h2>Register</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Register</button>
+</form>
+
+<!-- login.html -->
+<h2>Login</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+</form>
+
+
+Configure URLs for registration and login by creating URL patterns in the "urls.py" file within the "blog" app.
+
+Example URL mappings ("urls.py" within the "blog" app):
+
+
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('register/', views.register, name='register'),
+    path('login/', views.user_login, name='login'),
+]
+
+
+Restrict access to certain views to authenticated users by using the @login_required decorator from Django's authentication system. Apply this decorator to views that require authentication.
+
+Example view with @login_required decorator:
+
+
+from django.contrib.auth.decorators import login_required
+
+@login_required
+def create_post(request):
+    # Implement view logic for creating blog posts
+    pass
+
+
+Allow logged-in users to create, edit, and delete their own blog posts. Modify the view functions and templates for these actions to ensure that users can only edit or delete their own posts.
+
+Example view for editing a post, ensuring ownership:
+
+
+@login_required
+def edit_post(request, pk):
+    post = get_object_or_404(BlogPost, pk=pk)
+    if post.author != request.user:
+        # Handle permission denied (e.g., redirect to error page)
+        pass
+    if request.method == 'POST':
+        # Implement logic for editing the post
+        pass
+    else:
+        # Render edit post template
+        pass
+
+
+Implement user logout functionality by creating a view function for logging out and including a URL pattern for it.
+
+Example view for logging out:
+
+
+from django.contrib.auth import logout
+
+def user_logout(request):
+    logout(request)
+    return redirect('post_list')
+
+
+Create a URL pattern for the logout view in the "urls.py" file within the "blog" app.
+
+Example URL mapping for logout:
+
+
+path('logout/', views.user_logout, name='logout'),
+
+
+Instruct students to update their templates to display appropriate content and navigation links based on whether a user is logged in or not.
+
+Ask students to test the user authentication features thoroughly by registering, logging in, creating, editing, and deleting posts, and logging out.
+
+Save the updated Python files with appropriate filenames, such as "views.py," "urls.py," and "templates," within the "blog" app directory.
+
+Assignment Variation:
+To make the assignment more comprehensive, students can add additional features such as user profile pages, password reset functionality, or social authentication (e.g., using OAuth).
+
+Submission:
+
+After completing the assignment, students should create a ZIP file containing the entire Django project directory, including all code files, templates, and configurations.
+
+Instruct them to upload the ZIP file to the course's assignment submission portal.
+
+Evaluation Criteria:
+
+Proper implementation of user registration and login functionality.
+Correct usage of the @login_required decorator for restricting access.
+Accurate implementation of user-specific actions (e.g., creating, editing, deleting posts).
+Successful implementation of user logout functionality.
+Appropriate handling of user permissions and ownership of posts.
+Clear and user-friendly templates and navigation for logged-in and logged-out users.
+Thorough testing of user authentication features.
+Adherence to the submission instructions.

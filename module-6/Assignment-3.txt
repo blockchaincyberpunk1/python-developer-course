@@ -1,0 +1,134 @@
+Authentication and Authorization with Django
+
+Objective: To reinforce user authentication and authorization concepts.
+
+Task:
+In this assignment, students will extend the Django web application from Assignment 2 by adding user authentication and authorization features. They should implement user registration, login, and logout functionality, restrict access to certain views to authenticated users, implement role-based authorization (e.g., user roles like "admin" and "regular user"), and allow admins to manage users and their roles.
+
+Instructions:
+
+Instruct students to open their existing Django project (created in Assignment 2) or create a new Django project and app if necessary.
+
+Ask them to install Django's built-in authentication system by adding 'django.contrib.auth' to the INSTALLED_APPS list in the project's settings (settings.py) if it's not already included.
+
+
+# settings.py
+
+INSTALLED_APPS = [
+    # ...
+    'django.contrib.auth',
+    # ...
+]
+
+
+Run the following command to create the necessary database tables for user authentication:
+
+
+python manage.py migrate
+
+
+Instruct students to create URL patterns for user authentication (e.g., registration, login, logout) in the "urls.py" file within the app. They should use Django's built-in views and templates for authentication.
+
+Example URL mappings for authentication ("urls.py" within the app):
+
+
+from django.urls import path
+from django.contrib.auth import views as auth_views
+from . import views
+
+urlpatterns = [
+    # ...
+    path('accounts/login/', auth_views.LoginView.as_view(), name='login'),
+    path('accounts/logout/', auth_views.LogoutView.as_view(), name='logout'),
+    path('accounts/register/', views.register, name='register'),
+    # ...
+]
+
+
+Instruct students to create a registration view ("register" function) that allows users to register with their username and password.
+
+Example registration view ("views.py" within the app):
+
+
+from django.contrib.auth.forms import UserCreationForm
+from django.shortcuts import render, redirect
+
+def register(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('login')
+    else:
+        form = UserCreationForm()
+    return render(request, 'registration/register.html', {'form': form})
+
+
+Encourage students to create templates for user registration, login, and logout views. They can customize the templates to match the application's design.
+
+Guide them to restrict access to certain views to authenticated users by using the @login_required decorator from Django's authentication system. Apply this decorator to views that require authentication.
+
+Example view with @login_required decorator:
+
+
+from django.contrib.auth.decorators import login_required
+
+@login_required
+def some_protected_view(request):
+    # View logic for authenticated users
+    pass
+
+
+Ask students to implement role-based authorization by defining user roles (e.g., "admin" and "regular user") and restricting access to specific views or features based on the user's role.
+
+Example role-based authorization in a view:
+
+
+from django.contrib.auth.decorators import user_passes_test
+
+def is_admin(user):
+    return user.is_authenticated and user.groups.filter(name='admin').exists()
+
+@user_passes_test(is_admin)
+def admin_dashboard(request):
+    # View logic for admin users
+    pass
+
+
+Instruct them to create a view for admin users to manage users and their roles. Admins should be able to assign users to roles (e.g., "admin" or "regular user").
+
+Example view for managing users and roles:
+
+
+from django.contrib.auth.models import User, Group
+
+def manage_users(request):
+    users = User.objects.all()
+    groups = Group.objects.all()
+    # Implement logic for managing users and roles
+    pass
+
+
+Ensure that the application provides a user-friendly interface for user management, allowing admins to assign roles to users.
+
+Encourage students to test the user authentication and authorization features thoroughly, including registration, login, role-based access control, and user management by admin users.
+
+Save the Python files with appropriate filenames, such as "views.py," "forms.py," "urls.py," and create or modify templates as needed.
+
+Assignment Variation:
+To make the assignment more challenging, students can implement additional features like password reset functionality, user profile pages, or custom user roles with specific permissions.
+
+Submission:
+
+After completing the assignment, students should create a ZIP file containing the entire Django project directory, including all code files, templates, and configurations related to the authentication and authorization features.
+
+Instruct them to upload the ZIP file to the course's assignment submission portal.
+
+Evaluation Criteria:
+
+Proper setup of user authentication and registration views.
+Accurate implementation of role-based authorization.
+Successful user management by admin users.
+Effective use of decorators and permissions for access control.
+Thorough testing of user authentication and authorization features.
+Adherence to the submission instructions.

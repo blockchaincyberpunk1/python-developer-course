@@ -1,0 +1,80 @@
+Simple Web Page using Flask
+
+Objective: To introduce students to web development using Flask.
+
+Task:
+In this assignment, you will introduce students to web development using Flask by asking them to create a simple web page. They should set up a Flask application, create a route that renders an HTML template, add basic content to the HTML page (e.g., text, images), and run the Flask app locally to access the web page.
+
+Instructions:
+
+Instruct the students to open their preferred text editor or integrated development environment (IDE) for Python.
+
+Ask them to create a Python program that does the following:
+
+a. Set up a Flask application by importing the Flask library and initializing an instance of the Flask class.
+
+
+from flask import Flask
+app = Flask(__name__)
+
+
+b. Create a route that specifies a URL path (e.g., "/") and associates it with a Python function. This function will render an HTML template.
+
+
+@app.route("/")
+def index():
+    return "Hello, Flask!"
+
+
+c. Create an HTML template (e.g., "index.html") that the route function will render. Encourage students to include basic HTML content in the template, such as text and images.
+
+Example HTML template ("templates/index.html"):
+
+html
+Copy code
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Simple Web Page</title>
+</head>
+<body>
+    <h1>Welcome to my web page!</h1>
+    <p>This is a simple web page created using Flask.</p>
+    <img src="{{ url_for('static', filename='image.png') }}" alt="Sample Image">
+</body>
+</html>
+
+
+d. Set up a folder named "static" in the project directory to store static files like images. Place sample image files in the "static" folder.
+
+e. In the HTML template, use the {{ url_for('static', filename='image.png') }} syntax to reference the static image files.
+
+Instruct the students to run the Flask app locally by adding the following code at the end of their Python program:
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
+
+
+Ask them to open a web browser and navigate to the URL where their Flask app is running (typically, it will be something like "http://localhost:5000"). They should be able to see the simple web page they created.
+
+Encourage students to explore further by adding more routes, templates, and content to their web page.
+
+Save the Python program with an appropriate filename, such as "simple_web_page.py."
+
+Submission:
+
+After completing the assignment, students should save their Python program file (e.g., simple_web_page.py).
+
+Instruct them to create a ZIP file containing the Python program file, HTML template file, and any additional files (e.g., images) they used.
+
+Ask them to upload the ZIP file to the course's assignment submission portal.
+
+Evaluation Criteria:
+
+Proper setup of a Flask application.
+Correct creation of a route and associated Python function.
+Accurate rendering of an HTML template.
+Inclusion of basic content (e.g., text, images) in the HTML page.
+Successful execution of the Flask app locally.
+Adherence to the submission instructions.

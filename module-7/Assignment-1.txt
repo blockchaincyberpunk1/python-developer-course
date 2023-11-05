@@ -1,0 +1,104 @@
+Multithreading with Python
+
+Objective: To understand the basics of multithreading in Python.
+
+Task:
+In this assignment, students will create a Python program that utilizes multithreading. They should create multiple threads to perform a specific task concurrently, implement synchronization mechanisms like locks or semaphores to avoid race conditions, and measure and compare the execution time with and without multithreading.
+
+Instructions:
+
+Instruct students to open their preferred text editor or integrated development environment (IDE) for Python.
+
+Ask them to create a Python script (e.g., "multithreading_example.py") for this assignment.
+
+Encourage students to choose a computationally intensive task that can be divided into smaller subtasks for parallel processing. Examples include calculating Fibonacci numbers, generating prime numbers, or performing matrix multiplication.
+
+Guide students to implement the task in two different ways: one with a single-threaded approach (sequential execution) and another using multithreading.
+
+When implementing the multithreaded version, instruct them to use the threading module in Python to create multiple threads. Each thread should handle a subtask of the overall computation.
+
+Example code for creating multiple threads:
+
+
+import threading
+
+def worker_function(subtask_parameters):
+    # Implement subtask logic here
+    pass
+
+# Create multiple threads
+threads = []
+for i in range(num_threads):
+    thread = threading.Thread(target=worker_function, args=(subtask_parameters,))
+    threads.append(thread)
+
+# Start the threads
+for thread in threads:
+    thread.start()
+
+# Wait for all threads to complete
+for thread in threads:
+    thread.join()
+
+
+Instruct students to implement synchronization mechanisms like locks or semaphores if their multithreaded task involves shared resources or data to avoid race conditions and ensure correct results.
+
+Example usage of a lock to synchronize threads:
+
+
+import threading
+
+# Create a lock
+lock = threading.Lock()
+
+def worker_function(subtask_parameters):
+    # Acquire the lock
+    with lock:
+        # Perform thread-safe operations
+        pass
+
+# ...
+
+
+Encourage students to measure and compare the execution time of both the single-threaded and multithreaded approaches. They can use the time module to record the start and end times of each version and calculate the execution time difference.
+
+Example code to measure execution time:
+
+
+import time
+
+# Record start time
+start_time = time.time()
+
+# Execute the task (single-threaded or multithreaded)
+
+# Record end time
+end_time = time.time()
+
+# Calculate execution time
+execution_time = end_time - start_time
+
+
+Ask students to document their findings and observations in a report. They should explain the task they chose, describe the implementation of both the single-threaded and multithreaded versions, discuss any challenges faced during multithreading, and present the results of their execution time comparison.
+
+Encourage them to include their Python script and the report in their assignment submission.
+
+Remind students to test their code thoroughly to ensure correctness.
+
+Assignment Variation:
+To make the assignment more challenging, students can explore more complex synchronization mechanisms like semaphores, study the Global Interpreter Lock (GIL) in Python, or implement parallelism using the multiprocessing module for CPU-bound tasks.
+
+Submission:
+
+After completing the assignment, students should create a ZIP file containing their Python script, the report in a suitable format (e.g., PDF or Markdown), and any additional documentation.
+
+Instruct them to upload the ZIP file to the course's assignment submission portal.
+
+Evaluation Criteria:
+
+Correct implementation of both single-threaded and multithreaded versions of the task.
+Proper use of synchronization mechanisms (locks or semaphores) where necessary.
+Accurate measurement and comparison of execution times.
+Clear and well-documented report explaining the task, implementation, challenges, and results.
+Thorough testing of the code to ensure correctness.
+Adherence to the submission instructions.

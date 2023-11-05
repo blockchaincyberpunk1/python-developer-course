@@ -1,0 +1,62 @@
+List Operations
+
+Objective: To practice working with Python lists.
+
+Task:
+In this assignment, you will practice working with Python lists by writing a Python program that demonstrates various list operations. You will create lists with different data types (e.g., integers, strings) and perform operations like appending, extending, slicing, and sorting lists. Additionally, you will implement list comprehensions to filter and transform data in a list.
+
+Instructions:
+
+Open your preferred text editor or integrated development environment (IDE) for Python.
+
+Create a Python program that does the following:
+
+a. Create two lists:
+
+A list of integers named numbers containing at least five integer values.
+A list of strings named fruits containing at least five different fruit names.
+Example list creation:
+
+
+numbers = [10, 20, 30, 40, 50]
+fruits = ["apple", "banana", "cherry", "date", "elderberry"]
+
+
+b. Perform the following operations on the numbers list:
+
+Append a new integer value to the end of the list.
+Extend the list with another list of integers.
+Slice the list to create a new list containing only the middle three values.
+Sort the list in ascending order.
+c. Perform the following operations on the fruits list:
+
+Append a new fruit name to the end of the list.
+Extend the list with another list of fruit names.
+Slice the list to create a new list containing only the first three fruit names.
+Sort the list in alphabetical order.
+d. Use list comprehensions to create new lists that filter and transform data from the numbers and fruits lists:
+
+Create a new list containing only the even numbers from the numbers list.
+Create a new list that converts each fruit name in the fruits list to uppercase.
+Display the results of each operation using the print() function. Include clear and informative output messages.
+
+Save your Python program with an appropriate filename, such as "list_operations.py."
+
+Run your Python program to verify that it executes correctly and produces the expected results.
+
+Submission:
+
+After completing the assignment, save your Python program file (e.g., list_operations.py).
+
+Create a ZIP file containing your Python program file and any additional files if necessary.
+
+Upload the ZIP file to the course's assignment submission portal.
+
+Evaluation Criteria:
+
+Successful execution of the program: Does the program run without errors?
+Proper creation and manipulation of lists.
+Correctness of list operations and transformations.
+Proper use of list comprehensions.
+Clear and informative output messages.
+Adherence to the submission instructions.

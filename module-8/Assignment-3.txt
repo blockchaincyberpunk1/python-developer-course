@@ -1,0 +1,96 @@
+Linear Regression with Scikit-Learn
+
+Objective: To apply linear regression for predictive modeling.
+
+Task:
+In this assignment, students will use the Scikit-Learn library to perform linear regression on a dataset. They should load the dataset and preprocess it as necessary, split the data into training and testing sets, train a linear regression model, and evaluate its performance using metrics like mean squared error (MSE) and R-squared.
+
+Instructions:
+
+Instruct students to open their preferred text editor or integrated development environment (IDE) for Python.
+
+Ask them to choose a dataset for linear regression. The dataset should contain both input features (independent variables) and a target variable (dependent variable) that they want to predict. The dataset can be relevant to their interests or provided by the instructor.
+
+Encourage students to load the chosen dataset into a Pandas DataFrame using the pandas library's read_csv() function. They should ensure that they understand the structure of the data and the meaning of each column.
+
+Example code to load a CSV file:
+
+
+import pandas as pd
+
+# Load the dataset into a Pandas DataFrame
+df = pd.read_csv('dataset.csv')
+
+
+Guide students to preprocess the data as necessary. This may involve handling missing values, encoding categorical variables, and scaling or normalizing numeric features.
+
+Instruct students to split the dataset into training and testing sets using Scikit-Learn's train_test_split() function. The training set will be used to train the linear regression model, and the testing set will be used to evaluate its performance.
+
+Example code to split the dataset:
+
+
+from sklearn.model_selection import train_test_split
+
+# Split the data into training and testing sets (e.g., 80% training, 20% testing)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+
+Encourage students to import the LinearRegression class from Scikit-Learn and create an instance of the linear regression model.
+
+Example code to create a linear regression model:
+
+
+from sklearn.linear_model import LinearRegression
+
+# Create a linear regression model
+model = LinearRegression()
+
+
+Instruct students to train the linear regression model using the training data. They should fit the model to the training features (X_train) and target variable (y_train).
+
+Example code to train the model:
+
+
+# Train the linear regression model
+model.fit(X_train, y_train)
+
+
+Ask students to use the trained model to make predictions on the testing data (X_test) and calculate evaluation metrics like mean squared error (MSE) and R-squared to assess the model's performance.
+
+Example code to make predictions and calculate metrics:
+
+
+from sklearn.metrics import mean_squared_error, r2_score
+
+# Make predictions on the testing data
+y_pred = model.predict(X_test)
+
+# Calculate mean squared error (MSE)
+mse = mean_squared_error(y_test, y_pred)
+
+# Calculate R-squared (coefficient of determination)
+r2 = r2_score(y_test, y_pred)
+
+
+Encourage students to interpret the evaluation metrics and draw conclusions about the model's performance. They should document their findings and discuss whether the linear regression model is a good fit for the data.
+
+Instruct students to submit the Python script containing their data preprocessing, model training, and evaluation code, along with any necessary explanations and conclusions.
+
+Assignment Variation:
+To make the assignment more advanced, students can explore topics such as feature selection, regularization techniques (e.g., Lasso, Ridge), or nonlinear regression models (e.g., polynomial regression).
+
+Submission:
+
+After completing the assignment, students should create a ZIP file containing their Python script, any necessary data preprocessing code, explanations of their findings, and conclusions.
+
+Instruct them to upload the ZIP file to the course's assignment submission portal.
+
+Evaluation Criteria:
+
+Proper loading and understanding of the dataset.
+Effective data preprocessing techniques.
+Correct splitting of the dataset into training and testing sets.
+Proper implementation of linear regression modeling.
+Accurate evaluation of the model using metrics.
+Clear and insightful conclusions drawn from the analysis.
+Adherence to the submission instructions.

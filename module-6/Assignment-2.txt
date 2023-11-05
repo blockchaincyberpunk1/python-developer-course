@@ -1,0 +1,131 @@
+Database-Driven Web App with Django
+
+Objective: To introduce database integration with Django.
+
+Task:
+In this assignment, students will create a Django-based web application with a database backend. They should set up Django models for a specific domain (e.g., a task management app with tasks and categories), create views to list, add, edit, and delete items, implement forms for user input and validation, and ensure that data is stored in the database and retrieved when requested.
+
+Instructions:
+
+Instruct the students to open their preferred text editor or integrated development environment (IDE) for Python.
+
+Ask them to navigate to their existing Django project (if they have one) or create a new Django project using the following command (replace "projectname" with a suitable project name):
+
+
+django-admin startproject projectname
+
+Inside the project directory, create a Django app named "tasks" (or an appropriate name for the domain) using the following command:
+
+
+python manage.py startapp tasks
+
+
+Guide students to define Django models for their chosen domain (e.g., tasks and categories). They should create a "models.py" file within the "tasks" app directory.
+
+Example model definitions ("models.py" within the "tasks" app):
+
+
+from django.db import models
+
+class Category(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+class Task(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.title
+
+
+Create database tables for the defined models by running the following commands:
+
+
+python manage.py makemigrations
+python manage.py migrate
+
+
+Instruct students to create views and templates for listing, adding, editing, and deleting items. For example:
+
+Create a view and template for listing tasks.
+Create a view and template for adding tasks using a form.
+Create a view and template for editing tasks using a form.
+Create a view and template for deleting tasks.
+Encourage students to implement forms for user input and validation. They can use Django's built-in ModelForm or create custom forms.
+
+Example form creation ("forms.py" within the "tasks" app):
+
+
+from django import forms
+from .models import Task
+
+class TaskForm(forms.ModelForm):
+    class Meta:
+        model = Task
+        fields = ['title', 'description', 'category']
+
+
+Instruct students to implement the necessary URL mappings in the "urls.py" file within the "tasks" app to link views to URLs.
+
+Example URL mappings ("urls.py" within the "tasks" app):
+
+
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('tasks/', views.task_list, name='task_list'),
+    path('tasks/add/', views.task_add, name='task_add'),
+    path('tasks/edit/<int:pk>/', views.task_edit, name='task_edit'),
+    path('tasks/delete/<int:pk>/', views.task_delete, name='task_delete'),
+]
+
+
+Instruct students to create navigation links in their templates to move between pages.
+
+Example navigation links in a template:
+
+
+<!-- task_list.html -->
+<a href="{% url 'task_add' %}">Add Task</a>
+
+<!-- task_add.html -->
+<a href="{% url 'task_list' %}">Back to Task List</a>
+
+
+Ensure that data is stored in the database when users add or edit items and retrieved when requested to display on the web pages.
+
+Ask students to run the Django development server using the following command:
+
+
+python manage.py runserver
+
+
+Instruct them to open a web browser and navigate to the URL where their Django app is running (typically, it will be something like "http://localhost:8000/tasks/"). They should be able to use the web application to list, add, edit, and delete items.
+
+Encourage students to thoroughly test the functionality, including form validation and database interactions.
+
+Save the Python files with appropriate filenames, such as "models.py," "views.py," "forms.py," "urls.py," and create templates as needed.
+
+Assignment Variation:
+To make the assignment more comprehensive, students can add features such as user authentication, task filtering, task completion status, or additional models and relationships.
+
+Submission:
+
+After completing the assignment, students should create a ZIP file containing the entire Django project directory, including all code files, templates, and configurations related to the database-driven web app.
+
+Instruct them to upload the ZIP file to the course's assignment submission portal.
+
+Evaluation Criteria:
+
+Proper setup of Django models for the chosen domain.
+Accurate implementation of views, templates, and forms.
+Effective use of URL mappings for navigation.
+Successful interaction with the database, including adding, editing, and deleting items.
+Proper validation of user input in forms.
+Thorough testing of web application functionality.
+Adherence to the submission instructions.

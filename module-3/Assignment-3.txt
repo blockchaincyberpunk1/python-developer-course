@@ -1,0 +1,77 @@
+Dictionary Functions
+
+Objective: To practice working with Python dictionaries.
+
+Task:
+In this assignment, you will practice working with Python dictionaries by writing a Python program that performs various dictionary operations. You will create dictionaries with key-value pairs, access, modify, and delete dictionary elements, and iterate through dictionary keys and values to perform specific tasks.
+
+Instructions:
+
+Open your preferred text editor or integrated development environment (IDE) for Python.
+
+Create a Python program that does the following:
+
+a. Create two or more dictionaries with key-value pairs. Each dictionary should contain information related to a specific topic or entity.
+
+Example dictionary definitions:
+
+
+student_info = {"name": "John Doe", "age": 25, "major": "Computer Science"}
+employee_info = {"name": "Jane Smith", "employee_id": "EMP12345", "department": "HR"}
+
+
+b. Implement dictionary operations to perform the following tasks:
+
+Access and display values associated with specific keys.
+Modify the value of a specific key.
+Add new key-value pairs to a dictionary.
+Delete a key-value pair from a dictionary.
+Example operations:
+
+
+# Access and display values
+student_name = student_info["name"]
+print("Student Name:", student_name)
+
+# Modify a value
+student_info["age"] = 26
+
+# Add a new key-value pair
+student_info["gender"] = "Male"
+
+# Delete a key-value pair
+del employee_info["employee_id"]
+
+
+c. Implement a loop to iterate through the keys and values of a dictionary and perform specific tasks, such as counting elements or displaying information.
+
+Example loop:
+
+
+# Iterate through keys and values
+for key, value in student_info.items():
+    print(f"{key}: {value}")
+
+
+Display the results of the dictionary operations and the output of the loop using the print() function. Include clear and informative output messages.
+
+Save your Python program with an appropriate filename, such as "dictionary_functions.py."
+
+Run your Python program to verify that it executes correctly and produces the expected results.
+
+Submission:
+
+After completing the assignment, save your Python program file (e.g., dictionary_functions.py).
+
+Create a ZIP file containing your Python program file and any additional files if necessary.
+
+Upload the ZIP file to the course's assignment submission portal.
+
+Evaluation Criteria:
+
+Successful execution of the program: Does the program run without errors?
+Proper creation and manipulation of dictionaries.
+Correctness of dictionary operations, including accessing, modifying, adding, and deleting key-value pairs.
+Proper implementation of dictionary iteration.
+Clear and informative output messages.
+Adherence to the submission instructions.

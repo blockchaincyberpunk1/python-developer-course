@@ -1,0 +1,99 @@
+Classification with Scikit-Learn
+
+Objective: To practice classification tasks using Scikit-Learn.
+
+Task:
+In this assignment, students will work with a classification dataset and Scikit-Learn to build and evaluate classification models. They should load and preprocess the dataset, split the data into training and testing sets, experiment with different classification algorithms (e.g., logistic regression, decision trees, or random forests), and evaluate and compare the models using classification metrics like accuracy, precision, recall, and F1-score.
+
+Instructions:
+
+Instruct students to open their preferred text editor or integrated development environment (IDE) for Python.
+
+Ask them to choose a classification dataset for this assignment. The dataset should contain features (independent variables) and a target variable (dependent variable) with two or more classes that they want to predict. The dataset can be relevant to their interests or provided by the instructor.
+
+Encourage students to load the chosen dataset into a Pandas DataFrame using the pandas library's read_csv() function. They should ensure that they understand the structure of the data and the meaning of each column.
+
+Example code to load a CSV file:
+
+
+import pandas as pd
+
+# Load the dataset into a Pandas DataFrame
+df = pd.read_csv('dataset.csv')
+
+
+Guide students to preprocess the data as necessary. This may involve handling missing values, encoding categorical variables, and scaling or normalizing numeric features.
+
+Instruct students to split the dataset into training and testing sets using Scikit-Learn's train_test_split() function. The training set will be used to train classification models, and the testing set will be used to evaluate their performance.
+
+Example code to split the dataset:
+
+
+from sklearn.model_selection import train_test_split
+
+# Split the data into training and testing sets (e.g., 80% training, 20% testing)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+
+Encourage students to import different classification algorithms from Scikit-Learn, such as logistic regression, decision trees, or random forests. They should create instances of these models.
+
+Example code to create a logistic regression model:
+
+
+from sklearn.linear_model import LogisticRegression
+
+# Create a logistic regression model
+model = LogisticRegression()
+
+
+Instruct students to train the classification models using the training data. They should fit the models to the training features (X_train) and target variable (y_train).
+
+Example code to train the model:
+
+
+# Train the classification model
+model.fit(X_train, y_train)
+
+
+Ask students to use the trained models to make predictions on the testing data (X_test) and calculate classification metrics such as accuracy, precision, recall, and F1-score to evaluate the models' performance.
+
+Example code to make predictions and calculate metrics:
+
+
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+
+# Make predictions on the testing data
+y_pred = model.predict(X_test)
+
+# Calculate accuracy
+accuracy = accuracy_score(y_test, y_pred)
+
+# Calculate precision, recall, and F1-score
+precision = precision_score(y_test, y_pred)
+recall = recall_score(y_test, y_pred)
+f1 = f1_score(y_test, y_pred)
+
+
+Encourage students to experiment with different classification algorithms and compare their performance using the evaluation metrics. They should also consider tuning hyperparameters if needed.
+
+Instruct students to write a report summarizing their classification experiments, including the dataset used, data preprocessing steps, the choice of classification algorithms, model performance evaluation, and conclusions about the best-performing model.
+
+Ask students to submit the Python script containing their data preprocessing, model training, and evaluation code, along with the report summarizing their findings and conclusions.
+
+Assignment Variation:
+To make the assignment more advanced, students can explore more complex classification tasks, such as multi-class classification or handling imbalanced datasets. They can also explore ensemble methods like AdaBoost or gradient boosting.
+
+Submission:
+
+After completing the assignment, students should create a ZIP file containing their Python script, any necessary data preprocessing code, explanations of their findings, and conclusions.
+
+Instruct them to upload the ZIP file to the course's assignment submission portal.
+
+Evaluation Criteria:
+
+Proper loading and understanding of the classification dataset.
+Effective data preprocessing techniques.
+Correct splitting of the dataset into training and testing sets.
+Proper implementation and evaluation of classification models.
+Clear and insightful conclusions drawn from the analysis.
+Adherence to the submission instructions.

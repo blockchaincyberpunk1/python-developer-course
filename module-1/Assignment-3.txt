@@ -1,0 +1,57 @@
+Control Structures in Python
+
+Objective: To practice using control structures in Python.
+
+Task:
+In this assignment, you will apply your knowledge of control structures in Python to solve a coding problem. You are required to implement a Python program that uses control structures, such as if-else statements and loops, to solve a specific problem or perform a task.
+
+Instructions:
+Choose one of the following coding problems to solve using control structures in Python. You can select the problem that interests you the most:
+
+Problem 1: Guess the Number Game
+
+Create a Python program that generates a random number between 1 and 100.
+Ask the user to guess the number.
+Provide feedback to the user by telling them if their guess is too high or too low.
+Allow the user to keep guessing until they correctly guess the number or choose to quit the game.
+Problem 2: Grade Calculator
+
+Create a Python program that calculates the final grade for a student based on the following criteria:
+Assign weights to different components (e.g., homework, quizzes, exams).
+Prompt the user to enter scores for each component.
+Calculate the weighted sum to determine the final grade.
+Display the final grade and a corresponding letter grade (A, B, C, etc.).
+Problem 3: Fibonacci Sequence
+
+Write a Python program that generates the Fibonacci sequence up to a specified number of terms (e.g., 10, 20, or any user-defined limit).
+Use a loop to calculate each term in the sequence.
+Display the generated Fibonacci sequence.
+Problem 4: Rock-Paper-Scissors Game
+
+Create a Python program that allows a user to play the classic rock-paper-scissors game against the computer.
+Prompt the user to enter their choice (rock, paper, or scissors).
+Randomly generate the computer's choice.
+Determine the winner based on the game's rules (rock beats scissors, scissors beats paper, paper beats rock, or it's a tie).
+Problem 5: Prime Number Checker
+
+Develop a Python program that checks whether a given number is prime or not.
+Ask the user to input a positive integer.
+Use a loop to check if the number is divisible by any integers other than 1 and itself.
+Display whether the number is prime or not.
+Ensure that your Python program is well-documented and includes clear explanations and comments where necessary. Test your program thoroughly to ensure it functions correctly.
+
+Submission:
+
+After completing the assignment, save your Python program with an appropriate filename related to the problem you chose (e.g., "guess_the_number.py").
+
+Create a ZIP file containing your Python program file and any additional files if necessary.
+
+Upload the ZIP file to the course's assignment submission portal.
+
+Evaluation Criteria:
+
+Successful execution of the program: Does the program run without errors?
+Correctness of the solution: Does the program solve the chosen problem effectively?
+Proper use of control structures (if-else statements and loops).
+Clarity and documentation of the code.
+Adherence to the submission instructions.

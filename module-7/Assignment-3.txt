@@ -1,0 +1,82 @@
+Asynchronous Programming with asyncio
+
+Objective: To introduce asynchronous programming using Python's asyncio library.
+
+Task:
+In this assignment, students will create an asynchronous Python program that performs I/O-bound operations concurrently. They should define asynchronous functions using the async and await keywords, use asyncio's event loop to run asynchronous tasks concurrently, and implement asynchronous I/O operations (e.g., fetching data from multiple web URLs).
+
+Instructions:
+
+Instruct students to open their preferred text editor or integrated development environment (IDE) for Python.
+
+Ask them to create a Python script (e.g., "asyncio_example.py") for this assignment.
+
+Encourage students to choose a task that involves I/O-bound operations, such as fetching data from multiple web URLs or making API requests. The task should be suitable for parallel execution using asynchronous programming.
+
+Guide students to implement the task using asynchronous functions. They should use the async def syntax to define asynchronous functions and the await keyword to perform I/O-bound operations asynchronously.
+
+Example code for defining an asynchronous function and making asynchronous requests using the aiohttp library:
+
+
+import aiohttp
+import asyncio
+
+async def fetch_url(session, url):
+    async with session.get(url) as response:
+        return await response.text()
+
+async def main():
+    async with aiohttp.ClientSession() as session:
+        urls = ['https://example.com', 'https://example.org', 'https://example.net']
+        tasks = [fetch_url(session, url) for url in urls]
+        results = await asyncio.gather(*tasks)
+
+    # Process the results
+
+if __name__ == '__main__':
+    asyncio.run(main())
+
+
+Instruct students to use the asyncio event loop to run their asynchronous tasks concurrently. They can use the asyncio.gather() function to execute multiple asynchronous functions concurrently and gather their results.
+
+Encourage students to measure and compare the execution time of their asynchronous program with a synchronous (sequential) version of the same program. They can use the time module to record start and end times and calculate the execution time difference.
+
+Example code to measure execution time:
+
+
+import time
+
+# Record start time
+start_time = time.time()
+
+# Execute the asynchronous program
+
+# Record end time
+end_time = time.time()
+
+# Calculate execution time
+execution_time = end_time - start_time
+
+
+Ask students to document their findings and observations in a report. They should explain the task they chose, describe the implementation of asynchronous functions and the event loop, discuss any challenges faced during asynchronous programming, and present the results of their execution time comparison.
+
+Encourage them to include their Python script, any necessary libraries (e.g., aiohttp), and the report in their assignment submission.
+
+Remind students to test their code thoroughly to ensure correctness.
+
+Assignment Variation:
+To make the assignment more advanced, students can explore topics such as asynchronous database operations, using asyncio for concurrent file I/O, or implementing custom asynchronous libraries.
+
+Submission:
+
+After completing the assignment, students should create a ZIP file containing their Python script, any necessary libraries, the report in a suitable format (e.g., PDF or Markdown), and any additional documentation.
+
+Instruct them to upload the ZIP file to the course's assignment submission portal.
+
+Evaluation Criteria:
+
+Correct implementation of asynchronous functions and the event loop.
+Accurate measurement and comparison of execution times.
+Clear and well-documented report explaining the task, implementation, challenges, and results.
+Thorough testing of the code to ensure correctness.
+Adherence to the submission instructions.

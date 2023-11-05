@@ -1,0 +1,78 @@
+Exception Handling
+
+Objective: To reinforce the importance of error handling in Python.
+
+Task:
+In this assignment, you will reinforce the concept of exception handling in Python by asking students to work on a Python program that involves exception handling. They should write a program that reads user input and attempts to perform operations that may raise exceptions. Then, they should implement try-except blocks to gracefully handle these exceptions and provide informative error messages to guide the user.
+
+Instructions:
+
+Instruct the students to open their preferred text editor or integrated development environment (IDE) for Python.
+
+Ask them to create a Python program that does the following:
+
+a. Prompts the user for input, such as numerical values or other data.
+
+Example user input:
+
+
+user_input = input("Enter a number: ")
+
+
+b. Attempt to perform operations on the user input that may raise exceptions. For example, they can attempt to convert the user input to an integer or perform mathematical operations.
+
+Example operations that may raise exceptions:
+
+
+# Attempt to convert user input to an integer
+try:
+    num = int(user_input)
+except ValueError:
+    print("Invalid input. Please enter a valid integer.")
+
+
+c. Implement try-except blocks to gracefully handle exceptions. Encourage them to use specific exception types (e.g., ValueError, ZeroDivisionError) based on the operations they are performing.
+
+Example exception handling:
+
+
+try:
+    result = 10 / num
+except ZeroDivisionError:
+    print("Error: Division by zero is not allowed.")
+
+
+d. Provide informative error messages to guide the user. When an exception is raised, display a message that explains the error and suggests how to correct it.
+
+Example error message:
+
+
+except ValueError:
+    print("Invalid input. Please enter a valid integer.")
+
+
+Instruct the students to run the Python program and test it with various inputs, including valid and invalid inputs, to verify that exception handling is working correctly.
+
+Encourage students to include multiple try-except blocks if their program involves different operations that can raise different types of exceptions.
+
+Save the Python program with an appropriate filename, such as "exception_handling.py."
+
+Assignment Variation:
+To make the assignment more challenging, you can provide different scenarios and ask students to handle specific exceptions related to those scenarios. For example, you can provide a scenario where the user needs to open a file, read its contents, and handle FileNotFoundError or PermissionError exceptions.
+
+Submission:
+
+After completing the assignment, students should save their Python program file (e.g., exception_handling.py).
+
+They should create a ZIP file containing the Python program file and any additional files if necessary.
+
+Instruct them to upload the ZIP file to the course's assignment submission portal.
+
+Evaluation Criteria:
+
+Proper implementation of user input and operations that may raise exceptions.
+Effective use of try-except blocks to gracefully handle exceptions.
+Clear and informative error messages for guiding the user.
+Accurate handling of specific exception types.
+Correctness of the program when tested with different inputs.
+Adherence to the submission instructions.

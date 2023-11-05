@@ -1,0 +1,51 @@
+Guess the Number Game
+
+Objective: To reinforce control structures and user interaction.
+
+Task:
+In this assignment, you will reinforce your understanding of control structures and user interaction by developing a "Guess the Number" game in Python. The program will generate a random number, and the user's task is to guess it. Provide hints (higher or lower) until the user guesses correctly. You should use loops, conditional statements, and user input to create the game.
+
+Instructions:
+
+Open your preferred text editor or integrated development environment (IDE) for Python.
+
+Create a Python program that implements the "Guess the Number" game with the following features:
+
+a. Generate a random number between a specified range (e.g., between 1 and 100) and store it in a variable as the target number.
+
+b. Prompt the user to guess the number.
+
+c. Implement a loop (e.g., a while loop) that continues until the user guesses the correct number.
+
+d. Within the loop:
+
+Check if the user's guess is equal to the target number. If it is, display a message indicating they have guessed correctly and exit the loop.
+If the user's guess is higher than the target number, provide a hint to guess lower.
+If the user's guess is lower than the target number, provide a hint to guess higher.
+e. Keep track of the number of attempts the user has made.
+
+f. After the user guesses the correct number, display a congratulatory message that includes the number of attempts it took to guess correctly.
+
+g. Allow the user to play the game again if they choose to continue.
+
+Test your "Guess the Number" game by playing it several times to ensure that it functions correctly, providing hints and tracking the number of attempts.
+
+Save your Python program with an appropriate filename, such as "guess_the_number_game.py."
+
+Run your Python program to verify that it executes correctly and provides the expected user experience.
+
+Submission:
+
+After completing the assignment, save your Python program file (e.g., guess_the_number_game.py).
+
+Create a ZIP file containing your Python program file and any additional files if necessary.
+
+Upload the ZIP file to the course's assignment submission portal.
+
+Evaluation Criteria:
+
+Successful execution of the game: Does the program run without errors and provide the expected user experience?
+Proper use of loops and conditional statements.
+Correctness of the game logic, including providing hints and tracking the number of attempts.
+User-friendly interface and clear instructions.
+Adherence to the submission instructions.

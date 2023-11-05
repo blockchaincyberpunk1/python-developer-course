@@ -1,0 +1,57 @@
+Python Functions
+
+Objective: To introduce students to functions in Python.
+
+Task:
+In this assignment, you will learn about the concept of functions in Python. You are required to create a Python program that defines functions to perform common mathematical operations (e.g., addition, subtraction, multiplication, division). After defining these functions, you will call them to solve arithmetic problems.
+
+Instructions:
+
+Open your preferred text editor or integrated development environment (IDE) for Python.
+
+Create a Python program that defines the following functions:
+
+add: This function should take two numbers as input and return their sum.
+subtract: This function should take two numbers as input and return their difference (subtract the second number from the first).
+multiply: This function should take two numbers as input and return their product.
+divide: This function should take two numbers as input and return the result of dividing the first number by the second. Make sure to handle division by zero by providing an appropriate error message.
+Example function definitions:
+
+
+def add(x, y):
+    return x + y
+
+def subtract(x, y):
+    return x - y
+
+# Define the other two functions similarly
+
+
+In your program, prompt the user to input two numbers and choose one of the mathematical operations (addition, subtraction, multiplication, or division).
+
+Based on the user's choice, call the corresponding function to perform the operation and display the result to the user.
+
+Use a loop to allow the user to perform multiple calculations until they choose to exit the program.
+
+Ensure that your program handles invalid inputs gracefully and provides clear instructions to the user.
+
+Save your Python program with an appropriate filename, such as "math_operations.py."
+
+Run your Python program to verify that it executes correctly and produces the expected results.
+
+Submission:
+
+After completing the assignment, save your Python program file (e.g., math_operations.py).
+
+Create a ZIP file containing your Python program file and any additional files if necessary.
+
+Upload the ZIP file to the course's assignment submission portal.
+
+Evaluation Criteria:
+
+Successful execution of the program: Does the program run without errors?
+Proper definition and use of functions for mathematical operations.
+Correctness of calculations and results.
+Handling of invalid inputs and error messages.
+User-friendly and informative interface.
+Adherence to the submission instructions.
